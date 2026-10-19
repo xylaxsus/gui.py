@@ -93,7 +93,6 @@ class TroubleshooterApp(tk.Tk):
         )
         style.map("TRadiobutton", background=[("active", CARD)])
 
-    # ---------- helpers ----------
     def clear(self):
         for child in self.container.winfo_children():
             child.destroy()
@@ -192,7 +191,6 @@ class TroubleshooterApp(tk.Tk):
             buttons, text="Continue", style="Accent.TButton", command=proceed,
         ).pack(side="right")
 
-    # ---------- screen 3: follow-up questions ----------
     def show_questions(self, device_name, item):
         questions = get_follow_up_questions(item)
 
